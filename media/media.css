@@ -17,7 +17,7 @@
         width: 20%;
     }
 
-    #header-container,#chefs-section, #header-container,#gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container,#gallery-section, #contact-section,#footer-section{
         max-width: 540px;
     }
 
