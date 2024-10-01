@@ -17,7 +17,7 @@
         width: 20%;
     }
 
-    #chefs-section, #header-container,#gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container,#gallery-section, #contact-section{
         max-width: 540px;
     }
 
@@ -54,7 +54,7 @@
         width: 20%;
     }
 
-    #chefs-section, #header-container, #gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
         max-width: 720px;
     }
 
@@ -124,7 +124,7 @@
     }
     
 
-    #chefs-section, #header-container, #gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
         max-width: 960px;
     }
 
@@ -176,7 +176,7 @@
         margin-inline: auto;
     }
     
-    #chefs-section, #header-container, #gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
         max-width: 1140px;
     }
 
@@ -237,7 +237,7 @@
         border-radius: 0px 100vh 100vh;
     }
 
-    #chefs-section, #header-container, #gallery-section, #contact-section{
+    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
         max-width: 1320px;
     }
 
