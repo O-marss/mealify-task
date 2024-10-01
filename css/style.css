@@ -1,0 +1,490 @@
+
+/* ^ Global Style 
+   ~ ----------------------------- */
+
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+h3{
+    color: #212529;
+    font-family: "Inter", sans-serif;
+    font-size: 18.72px;
+    font-weight: bold;
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* Adjust the display for all sections */
+.section{
+    display: flex;
+}
+
+/* Style the all sections title */
+.section-title{
+    width: 100%;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title h5{
+    color: #7f7f90;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.section-title p{
+    color: #212529;
+}
+
+.section-title p span{
+    color: #E51414;
+}
+
+
+/* Adjust a container for all the sub containers */
+.container{
+    width: 100%;
+    margin-inline: auto;
+    padding: 40px 15px;
+}
+
+
+
+/*  ^Header Style 
+   ~ ----------------------------- */
+
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+#header-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 95px;
+    margin-bottom: 0;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content h2{
+    font-family:  "Amatic SC", sans-serif;
+    font-size: 65px;
+    color: #37373f;
+
+}
+
+.header-content p{
+    color: #4f4f5a;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-block: 20px;
+    line-height: 1.6;
+}
+
+.header-image img{
+    filter: drop-shadow(4px 4px 9px #000a);
+}
+
+.header-image img:hover{
+    animation: shaking 1s infinite;
+}
+
+/* The header image animation */
+@keyframes shaking{
+    0%{transform: translate(1px, 1px) rotate(0deg);}
+    10%{transform: translate(-1px, -2px) rotate(-1deg);}
+    20%{transform: translate(-3px, 0px) rotate(1deg);}
+    30%{transform: translate(3px, 2px) rotate(0deg);}
+    40%{transform: translate(1px, -1px) rotate(-1deg);}
+    50%{transform: translate(-1px, 2px) rotate(0deg);}
+    60%{transform: translate(-3px, 1px) rotate(-1deg);}
+    70%{transform: translate(3px, 1px) rotate(0deg);}
+    80%{transform: translate(-1px, -1px) rotate(-1deg);}
+    90%{transform: translate(1px, 2px) rotate(0deg);}
+   100%{transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+.header-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-links button{
+    color: #fff;
+    background-color: #E51414;
+    border: 2px solid transparent;
+    border-radius: 100vh;
+    padding: 10px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.watch-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #212529;
+    transition: all 0.4s;
+}
+
+.play-icon{
+    background-image: linear-gradient(
+    to right,
+    #E51414 0 50%,
+    transparent 50% 100%
+  );
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 5px;
+    position: relative;
+    z-index: 99;
+}
+
+.play-icon::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    content: "";
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.play-icon i {
+    z-index: 9;
+}
+
+.watch-link:hover{
+    color: #E51414;
+}
+
+
+
+/* ^ The First section of the page style 
+   ~ ----------------------------- */
+
+#chefs-section{
+    margin-block: 50px;
+}
+
+
+.chefs-details{
+    display: flex;
+    flex-wrap: wrap;
+    padding-block:20px;
+    --gap: 30px;
+    gap: var(--gap);
+}
+
+.chef-box{
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s;
+}
+
+.chef-box img{
+    border-radius: 8px;
+}
+.chef-box:hover{
+    transform: scale(1.07)
+}
+
+.social-icons{
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff4d;
+    transition: right 0.4s 0.4s;
+}
+
+.social-icons i{
+    font-size: 18px;
+    padding: 10px 5px;
+    color: #37373f66;
+    transition: color 0.4s;
+}
+
+.chef-box:hover .social-icons {
+    right: 10px;
+}
+
+.social-icons i:hover{
+    color:#37373fe6 ;
+}
+
+.chef-image {
+    position: relative;
+    width: 100%;
+}
+
+.chef-image::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    background-image: url(/Assignment5/images/team-shape.svg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 60px ;
+}
+
+.inner-text{
+    padding: 10px 25px 25px ;
+}
+
+.inner-text h6{
+    color: #7f7f90;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0 10px;
+}
+
+.inner-text p{
+    color: #7f7f90;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+
+
+/* ^ The Second section of the page style 
+   ~ ----------------------------- */
+
+#second-section{
+    background-color: #EEEEEE;
+}
+
+#gallery-section{
+    margin-block: 50px;
+    padding-inline: 5px;
+}
+
+.gallery-pics{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    --gap: 20px;
+    gap: var(--gap);
+}
+
+
+.pics{
+    position: relative;
+    border: 4px solid #fff;
+    overflow: hidden;
+}
+
+.overlay{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color:#00000096;
+    transition: top 0.4s;
+    padding: 0.9375rem;
+}
+
+.overlay h3{
+    color: #fff;
+    font-size: 24px;
+}
+
+.overlay p{
+    color: #DDD;
+    text-align: center;
+}
+
+.pics:hover .overlay{
+    top: 0;;
+}
+
+.pics img{
+    transition: transform 0.4s;
+}
+
+.pics:hover img{
+    transform: scale(1.1);
+}
+
+#contact-section{
+    padding-inline: 5px;
+    margin-block: 50px;
+}
+
+iframe{
+    width: 100%;
+    border: none;
+}
+
+.contact-details{
+    display:flex;
+    flex-direction: column;
+    margin-block: 25px;
+    --gap: 15px;
+    gap: var(--gap);
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: hsl(
+    0,
+    0%,
+    calc(100% - 4%)
+  );
+}
+
+.icon{
+    min-width: 3.125rem;
+    min-height: 3.125rem;
+    background-color: hsl(0, 84%, 44%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon i{
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+
+.details h3{
+    color: #7d7d7d;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.contact-form{
+    display: flex;
+   
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    --gap: 15px;
+    gap: var(--gap);
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 1.875rem #00000014;
+}
+
+.input-text{
+    padding: 0.9375rem 0.9375rem;
+    font-family: inherit;
+    line-height: 1.5;
+    border: 2px solid
+    hsl(
+      0,
+      calc(0% + 10%),
+      calc(100% - 10%)
+    );
+    color: #212529;
+    transition: border-color var(--animation-duration);
+}
+
+textarea{
+    min-height: 9.375rem;
+    max-height: 18.75rem;
+    resize: vertical;
+}
+
+.submit-btn{
+    font-size: 15px;
+    align-self: center;
+    color: hsl(0, 0%, 100%);
+    width: fit-content;
+    margin-top: 25px;
+    padding: 12px 40px;
+    background-color: #E51414;
+    font-family: inherit;
+    border: 4px solid transparent;
+    border-radius: 100vh;
+    cursor: pointer;
+}
+
+.grouped-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    --gap:15px;
+    gap: var(--gap);
+    width: 100%;
+}
