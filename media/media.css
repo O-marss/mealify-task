@@ -1,280 +1,287 @@
+@media (min-width: 577px) {
+  .sm-100 {
+    width: 100%;
+  }
+  .sm-50 {
+    width: 50%;
+  }
+  .sm-33 {
+    width: 33.3333333333333334%;
+  }
+  .sm-25 {
+    width: 25%;
+  }
+  .sm-20 {
+    width: 20%;
+  }
 
+  #page-container .container {
+    max-width: 540px;
+  }
 
-@media (min-width: 576px){
-    .sm-100{
-        width: 100%;
-    }
-    .sm-50{
-        width: 50%;
-    }
-    .sm-33{
-        width: 33.3333333333333334%;
-    }
-    .sm-25{
-        width: 25%;
-    }
-    .sm-20{
-        width: 20%;
-    }
+  .container {
+    max-width: 540px;
+  }
 
-    #header-container,#chefs-section, #header-container,#gallery-section, #contact-section,#footer-section{
-        max-width: 540px;
-    }
-
-    .container{
-        max-width: 540px;
-    }
-
+  .sub-input {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+  }
 }
 
+@media (min-width: 769px) {
+  .m-100 {
+    width: 100%;
+  }
 
-@media (min-width: 769px){
+  .m-50 {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
 
-    .m-100{
-        width: 100%;
-    }
+  .m-40 {
+    width: 40%;
+  }
 
-    .m-50{
-        width: calc(calc(100% - var(--gap)) / 2);
-    }
+  .m-33 {
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+  }
 
-    .m-40{
-        width: 40%;
-    }
+  .m-25 {
+    width: 25%;
+  }
 
-    .m-33-30g{
-        width: calc(calc(100% - var(--gap) *2) / 3);
-    }
+  .m-20 {
+    width: 20%;
+  }
 
-    .m-25{
-        width: 25%;
-    }
-    
-    .m-20{
-        width: 20%;
-    }
+  #page-container .container {
+    max-width: 720px;
+  }
 
-    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
-        max-width: 720px;
-    }
+  #gallery-section .gallery-pics {
+    height: 1405px;
+  }
 
-    #gallery-section .gallery-pics{
-        height: 1405px;
-    }
+  .contact-details {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .contact-details{
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-    }
+  #footer-section .about,
+  .get-in {
+    order: 1;
+  }
 
+  #footer-section .subscribe-container {
+    order: 2;
+  }
+
+  #footer-section .quick-links {
+    order: 3;
+  }
 }
 
+@media (min-width: 993px) {
+  .l-100 {
+    width: 100%;
+  }
 
-@media (min-width: 993px){
-    .l-100{
-        width: 100%;
-    }
-    
-    .l-50{
-        width: calc(calc(100% - var(--gap)) / 2);
+  .l-50 {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
 
-    }
+  .l-40 {
+    width: 40%;
+  }
 
-    .l-40{
-        width: 40%;
-    }
+  .l-33 {
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+  }
 
-    .l-33{
-        width: calc(calc(100% - var(--gap) * 2) / 3);
+  .l-25 {
+    width: 25%;
+  }
 
-    }
-    
-    .l-25{
-        width: 25%;
-    }
+  .l-20 {
+    width: 20%;
+  }
 
-    .l-20{
-        width: 20%;
-    }
+  #chefs-section,
+  #header-container {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
 
-    #chefs-section, #header-container{
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
-    }
+  .header-content {
+    align-items: flex-start;
+  }
 
-    .header-content{
-        align-items: flex-start;
-    }
+  .header-content p {
+    text-align: left;
+  }
 
-    .header-content p {
-        text-align: left;
-    }
+  .header-links {
+    justify-content: flex-start;
+  }
 
+  .header-links button {
+    border-radius: 0px 100vh 100vh;
+  }
 
-    .header-links{
-        justify-content: flex-start;
-    }
+  #page-container .container {
+    max-width: 960px;
+  }
 
-    .header-links button{
-        border-radius: 0px 100vh 100vh;
-    }
-    
-
-    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
-        max-width: 960px;
-    }
-
-    #gallery-section .gallery-pics{
-        height: 845px;
-    }
-
-    .grouped-input{
-        flex-direction: row;
-    }
+  #gallery-section .gallery-pics {
+    height: 845px;
+  }
 }
 
+@media (min-width: 1201px) {
+  .xl-100 {
+    width: 100%;
+  }
 
+  .xl-50 {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
 
-@media (min-width: 1201px){
-    .xl-100{
-        width: 100%;
-        
-    }
+  .xl-40 {
+    width: 40%;
+  }
 
-    .xl-50{
-        width: calc(calc(100% - var(--gap)) / 2);
-    }
+  .xl-33 {
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+  }
 
-    .xl-40{
-        width: 40%;
-    }
+  .xl-25 {
+    width: 25%;
+  }
 
-    .xl-33{
-        width: calc(calc(100% - var(--gap) * 2) / 3);
-    }
+  .xl-20 {
+    width: 20%;
+  }
 
-    .xl-25{
-        width: 25%;
-    }
+  #header {
+    min-height: 100vh;
+  }
 
-    .xl-20{
-        width: 20%;
-    }
+  #chefs-section,
+  #header-container {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-inline: auto;
+  }
 
-    #header{
-        min-height: 100vh;
-    }
+  #page-container .container {
+    max-width: 1140px;
+  }
 
-    #chefs-section, #header-container{
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-inline: auto;
-    }
-    
-    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
-        max-width: 1140px;
-    }
+  .header-links button {
+    border-radius: 0px 100vh 100vh;
+  }
 
-    .header-links button{
-        border-radius: 0px 100vh 100vh;
-    }
+  #gallery-section .gallery-pics {
+    height: 1000px;
+  }
 
-    #gallery-section .gallery-pics{
-        height: 1000px;
-    }
+  #footer-section .about {
+    width: calc(calc(100% - var(--gap) * 2) / 4);
+    order: 0;
+  }
 
-    .grouped-input{
-        flex-direction: row;
-    }
+  #footer-section .subscribe-container {
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+    order: 1;
+  }
+
+  #footer-section .get-in {
+    width: calc(calc(100% - var(--gap) * 2) / 4);
+    order: 2;
+  }
 }
 
+@media (min-width: 1401px) {
+  .xxl-100 {
+    width: 100%;
+  }
 
+  .xxl-50 {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
 
-@media (min-width: 1401px){
-    .xxl-100{
-        width: 100%; 
-    }
+  .xxl-40 {
+    width: 40%;
+  }
 
+  .xxl-33 {
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+  }
 
+  .xxl-25 {
+    width: 25%;
+  }
 
-    .xxl-50{
-        width: calc(calc(100% - var(--gap)) / 2);
-    }
+  .xxl-20 {
+    width: 20%;
+  }
 
-    .xxl-40{
-        width: 40%;
-    }
+  #header {
+    min-height: 100vh;
+  }
 
-    .xxl-33{
-        width: calc(calc(100% - var(--gap) * 2) / 3);
-    }
+  #chefs-section,
+  #header-container {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-inline: auto;
+  }
 
-    .xxl-25{
-        width: 25%;
-    }
+  .header-links button {
+    border-radius: 0px 100vh 100vh;
+  }
 
-    .xxl-20{
-        width: 20%;
-    }
+  #page-container .container {
+    max-width: 1320px;
+  }
 
-    #header{
-        min-height: 100vh;
-    }
-
-    #chefs-section, #header-container{
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-inline: auto;
-    }
-    
-    .header-links button{
-        border-radius: 0px 100vh 100vh;
-    }
-
-    #header-container,#chefs-section, #header-container, #gallery-section, #contact-section{
-        max-width: 1320px;
-    }
-
-    #gallery-section .gallery-pics{
-        height: 1165px;
-    }
-   
+  #gallery-section .gallery-pics {
+    height: 1165px;
+  }
 }
 
+@media (max-width: 992px) {
+  .gallery-pics .pizza {
+    order: 1;
+  }
 
+  .gallery-pics .burger {
+    order: 2;
+  }
 
-@media (max-width: 992px){
-    .gallery-pics .pizza{
-        order: 1;
-    }
-    
-    .gallery-pics .burger{
-        order: 2;
-    }
-    
-    .gallery-pics .pizza-slices{
-        order: 3;
-    }
-    
-    .gallery-pics .omelette{
-        order: 4;
-    }
-    
-    .gallery-pics .steak{
-        order: 5;
-    }
-    
-    .gallery-pics .fried{
-        order: 6;
-    }
-    
-    .gallery-pics .kofta{
-        order: 7;
-    }
+  .gallery-pics .pizza-slices {
+    order: 3;
+  }
+
+  .gallery-pics .omelette {
+    order: 4;
+  }
+
+  .gallery-pics .steak {
+    order: 5;
+  }
+
+  .gallery-pics .fried {
+    order: 6;
+  }
+
+  .gallery-pics .kofta {
+    order: 7;
+  }
 }
