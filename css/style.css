@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -142,8 +147,6 @@ img {
     transition: color 0.4s;
   }
   
-
-
   .close-icon {
     align-self: flex-end;
     font-size: 22px;
@@ -154,13 +157,10 @@ img {
     transition: color 0.4s;
   }
   
-  
   #navbar-links li a:hover {
     color: #000;
   }
 
-
-  
   #navbar-links:target {
     transform: translateX(0);
   }
@@ -771,7 +771,18 @@ box-shadow: 0px 0px 21px 0px #0003 inset;
 
 
 
-#home:target #navbar-links li a:hover{
- 
-  color: red;
+::selection{
+  background-color: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness),
+    0.7
+  );
+    opacity: 0.2;
+    color: var(--color-light);
+}
+
+
+#chefs, #home, #gallery{
+  transition: all 0.4s ease-out;
 }

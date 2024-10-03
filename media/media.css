@@ -224,6 +224,7 @@
     order: 2;
   }
 
+  /* The menu list in large screens */
   #navbar-links{
     display: flex;
     flex-direction: row;
@@ -266,16 +267,16 @@
     transition: width 0.4s;
   }
 
-
   #navbar-links .link a:hover::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#home:target) .link a[href='#home']{
+  /* The menu style in the large screens */
+  body:has(.header:target) .link a[href='#home']{
     color: #000;
   }
 
-  body:has(#home:target) .link a[href='#home']::after{
+  body:has(.header:target) .link a[href='#home']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
@@ -287,22 +288,21 @@
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#gallery:target) .link a[href='#gallery']{
+  body:has(.second-section:target) .link a[href='#gallery']{
     color: #000;
   }
 
-  body:has(#gallery:target) .link a[href='#gallery']::after{
+  body:has(.second-section:target) .link a[href='#gallery']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#contact:target) .link a[href='#contact']{
+  body:has(.third-section:target) .link a[href='#contact']{
     color: #000;
   }
 
-  body:has(#contact:target) .link a[href='#contact']::after{
+  body:has(.third-section:target) .link a[href='#contact']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
-
 
 }
 
@@ -367,6 +367,7 @@
     order: 2;
   }
 
+  /* The menu list in large screens */
   #navbar-links{
     display: flex;
     flex-direction: row;
@@ -399,35 +400,36 @@
     display: none;
   }
 
-  body:has(#home:target) .link a[href='#home']{
+  /* The menu style in the large screens */
+  body:has(.header:target) .link a[href='#home']{
     color: #000;
   }
 
-  body:has(#home:target) .link a[href='#home']::after{
+  body:has(.header:target) .link a[href='#home']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#chefs:target) .link a[href='#chefs']{
+  body:has(.first-section:target) .link a[href='#chefs']{
     color: #000;
   }
 
-  body:has(#chefs:target) .link a[href='#chefs']::after{
+  body:has(.first-section:target) .link a[href='#chefs']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#gallery:target) .link a[href='#gallery']{
+  body:has(.second-section:target) .link a[href='#gallery']{
     color: #000;
   }
 
-  body:has(#gallery:target) .link a[href='#gallery']::after{
+  body:has(.second-section:target) .link a[href='#gallery']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 
-  body:has(#contact:target) .link a[href='#contact']{
+  body:has(.third-section:target) .link a[href='#contact']{
     color: #000;
   }
 
-  body:has(#contact:target) .link a[href='#contact']::after{
+  body:has(.third-section:target) .link a[href='#contact']::after{
     width: calc(calc(100% - var(--inline-gap) * 2) );
   }
 }
