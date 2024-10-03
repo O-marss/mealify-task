@@ -26,6 +26,10 @@
   }
 }
 
+
+
+
+
 @media (min-width: 769px) {
   .m-100 {
     width: 100%;
@@ -77,6 +81,12 @@
     order: 3;
   }
 }
+
+
+
+
+
+
 
 @media (min-width: 993px) {
   .l-100 {
@@ -135,7 +145,16 @@
   #gallery-section .gallery-pics {
     height: 845px;
   }
+
+  .grouped-input{
+    flex-direction: row;
+  }
 }
+
+
+
+
+
 
 @media (min-width: 1201px) {
   .xl-100 {
@@ -186,6 +205,10 @@
     height: 1000px;
   }
 
+  .grouped-input{
+    flex-direction: row;
+  }
+
   #footer-section .about {
     width: calc(calc(100% - var(--gap) * 2) / 4);
     order: 0;
@@ -200,7 +223,91 @@
     width: calc(calc(100% - var(--gap) * 2) / 4);
     order: 2;
   }
+
+  #navbar-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    box-shadow: none;
+    border: none;
+    color: #7f7f90;
+    font-size: 17px;
+    font-weight: 600;
+    --block-gap: 5px;
+    --inline-gap: 15px;
+    transform: translateX(0);
+  }
+  
+  #navbar-links .link a{
+    padding: var(--block-gap) var(--inline-gap);
+  }
+
+  .menu{
+    display: none;
+  }
+  
+  .night-mode{
+    margin: 0;
+  }
+  
+  #navbar-links .close-icon{
+    display: none;
+  }
+
+  #navbar-links .link a::after{
+    content: "";
+    position: absolute;
+    left: var(--inline-gap);
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #e51414;
+    transition: width 0.4s;
+  }
+
+
+  #navbar-links .link a:hover::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#home:target) .link a[href='#home']{
+    color: #000;
+  }
+
+  body:has(#home:target) .link a[href='#home']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(.first-section:target) .link a[href='#chefs']{
+    color: #000;
+  }
+
+  body:has(.first-section:target) .link a[href='#chefs']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#gallery:target) .link a[href='#gallery']{
+    color: #000;
+  }
+
+  body:has(#gallery:target) .link a[href='#gallery']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#contact:target) .link a[href='#contact']{
+    color: #000;
+  }
+
+  body:has(#contact:target) .link a[href='#contact']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+
 }
+
+
+
 
 @media (min-width: 1401px) {
   .xxl-100 {
@@ -227,7 +334,7 @@
     width: 20%;
   }
 
-  #header {
+  .header {
     min-height: 100vh;
   }
 
@@ -250,7 +357,82 @@
   #gallery-section .gallery-pics {
     height: 1165px;
   }
+
+  .grouped-input{
+    flex-direction: row;
+  }
+
+  #footer-section .get-in {
+    width: calc(calc(100% - var(--gap) * 2) / 4);
+    order: 2;
+  }
+
+  #navbar-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    box-shadow: none;
+    border: none;
+    color: #7f7f90;
+    font-size: 17px;
+    font-weight: 600;
+    --block-gap: 5px;
+    --inline-gap: 15px;
+    transform: translateX(0);
+    width: auto;
+  }
+  
+  #navbar-links .link a{
+    padding: var(--block-gap) var(--inline-gap);
+  }
+
+  .menu{
+    display: none;
+  }
+  
+  .night-mode{
+    margin: 0;
+  }
+  
+  #navbar-links .close-icon{
+    display: none;
+  }
+
+  body:has(#home:target) .link a[href='#home']{
+    color: #000;
+  }
+
+  body:has(#home:target) .link a[href='#home']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#chefs:target) .link a[href='#chefs']{
+    color: #000;
+  }
+
+  body:has(#chefs:target) .link a[href='#chefs']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#gallery:target) .link a[href='#gallery']{
+    color: #000;
+  }
+
+  body:has(#gallery:target) .link a[href='#gallery']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
+
+  body:has(#contact:target) .link a[href='#contact']{
+    color: #000;
+  }
+
+  body:has(#contact:target) .link a[href='#contact']::after{
+    width: calc(calc(100% - var(--inline-gap) * 2) );
+  }
 }
+
+
 
 @media (max-width: 992px) {
   .gallery-pics .pizza {

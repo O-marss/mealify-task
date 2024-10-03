@@ -79,10 +79,102 @@ img {
   padding: 40px 15px;
 }
 
+
+/* ^ The Navbar style 
+   ~ ----------------------------- */
+
+   #navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 14px 0px #0000001b;
+    z-index: 9999;
+  }
+  
+  .navbar-container {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 0;
+    padding: 25px 5px;
+  }
+  
+  .night-mode {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .menu {
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  #navbar-links {
+    display: flex;
+    flex-direction: column;
+    --block-gap: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    background-color: #fff;
+    color: #7f7f90;
+    font-size: 17px;
+    font-weight: 600;
+    border-left: 2px solid #f1f1f1;
+    transform: translateX(100%);
+    z-index: 999;
+    transition: transform 0.4s;
+  }
+  
+  #navbar-links .link a {
+    display: inline-block;
+    position: relative;
+    padding: var(--block-gap) 10px;
+    transition: color 0.4s;
+  }
+  
+
+
+  .close-icon {
+    align-self: flex-end;
+    font-size: 22px;
+    padding: 10px 15px 5px;
+  }
+  
+  #navbar-links .close-icon a {
+    transition: color 0.4s;
+  }
+  
+  
+  #navbar-links li a:hover {
+    color: #000;
+  }
+
+
+  
+  #navbar-links:target {
+    transform: translateX(0);
+  }
+  
+  #navbar:has(#navbar-links:target) {
+    height: 100%;
+    background-color: hsl(0, 0%, 100%, 0.7);
+  }
+
+  
 /*  ^Header Style 
    ~ ----------------------------- */
 
-#header {
+.header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -329,7 +421,7 @@ img {
 /* ^ The Second section of the page style 
    ~ ----------------------------- */
 
-#second-section {
+.second-section {
   background-color: #eeeeee;
 }
 
@@ -519,6 +611,7 @@ textarea {
   gap: var(--gap);
   color: #fff;
   margin-block: 0;
+  padding: 40px 5px;
 }
 
 .about {
@@ -555,6 +648,10 @@ textarea {
   color: #e51414;
 }
 
+#footer .logo{
+  color: #fff;
+}
+
 .about p {
   margin-block: 10px;
 }
@@ -580,7 +677,7 @@ textarea {
 }
 
 .subscribe-container p {
-  margin-block: 10px;
+  margin-top: 10px;
 }
 
 .sub-input {
@@ -657,88 +754,24 @@ textarea {
   font-size: 22px;
 }
 
-/* ^ The Navbar style 
-   ~ ----------------------------- */
 
-#navbar {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 0px 0px 14px 0px #0000001b;
-  z-index: 9999;
+::-webkit-scrollbar{
+width: 12px;
+background-color: #fff;
+border-left: 2px solid #eee;
+box-shadow: 0px 0px 21px 0px #0003 inset;
 }
 
-.navbar-container {
-  align-self: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-inline: auto;
-  margin-block: 0;
-  padding: 25px 5px;
+::-webkit-scrollbar-thumb{
+  background-color: #000;
+  box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+  border-radius: 100vh;
 }
 
-.night-mode {
-  font-size: 25px;
-  margin-left: auto;
-  margin-right: 20px;
-}
 
-.menu {
-  font-size: 25px;
-  margin-right: 20px;
-  cursor: pointer;
-}
 
-#navbar-links {
-  display: flex;
-  flex-direction: column;
-  --block-gap: 15px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 350px;
-  background-color: #fff;
-  color: #7f7f90;
-  font-size: 17px;
-  font-weight: 600;
-  border-left: 2px solid #f1f1f1;
-  transform: translateX(100%);
-  z-index: 999;
-  transition: transform 0.4s;
-}
 
-#navbar-links .link a {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding: var(--block-gap) 10px;
-  transition: color 0.4s;
-}
-
-.close-icon {
-  align-self: flex-end;
-  font-size: 22px;
-  padding: 10px 15px 5px;
-}
-
-#navbar-links .close-icon a {
-  transition: color 0.4s;
-}
-
-#navbar-links li a:hover {
-  color: #000;
-}
-
-#navbar-links:target {
-  transform: translateX(0);
-}
-
-#navbar:has(#navbar-links:target) {
-  height: 100%;
-  background-color: hsl(0, 0%, 100%, 0.7);
+#home:target #navbar-links li a:hover{
+ 
+  color: red;
 }
