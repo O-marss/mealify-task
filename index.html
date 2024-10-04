@@ -25,16 +25,16 @@
   </head>
   <body>
     <!-- The main page container -->
-    <div id="page-container">
+    <div id="page-container" class="page">
       <div id="navbar">
         <div class="navbar-container container">
           <div class="navbar-logo">
             <h2 class="logo">Mealify</h2>
           </div>
           <!-- The navbar menu list -->
-          <ul id="navbar-links">
+          <ul id="navbar-links" class="navbar-links">
             <li class="close-icon">
-              <a href="#header"><i class="fa-solid fa-xmark"></i></a>
+              <a href="#home"><i class="fa-solid fa-xmark"></i></a>
             </li>
             <li class="link"><a href="#home">Home</a></li>
             <li class="link"><a href="#chefs">Chefs</a></li>
@@ -42,8 +42,10 @@
             <li class="link"><a href="#contact">Contact</a></li>
           </ul>
           <!-- Button to change the page mode color -->
-          <div class="night-mode">
-            <a href=""><i class="fa-solid fa-moon"></i></a>
+          <div class="color-mode">
+            <label for="mode" class="dark-mode"><i class="fa-solid fa-moon"></i></label>
+            <label for="mode" class="light-mode"><i class="fa-regular fa-sun"></i></label>
+            <input type="checkbox" id="mode" class="mode" hidden aria-hidden >
           </div>
           <!-- Button to display the menu list in small screens -->
           <div class="menu">

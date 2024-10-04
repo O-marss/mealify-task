@@ -1,3 +1,39 @@
+:root {
+  --navbar-bg-color: #fff;
+  --logo-color: #212121;
+  --menu-list-color: #7f7f7f;
+  --mode-icons: #212529;
+  --main-bg-color: #fff;
+  --sub-bg-color: #eee;
+  --highlight-color: #e51414;
+  --play-icon-bg: #fff;
+  --inner-color: #fff;
+  --svg-mode: url(/Assignment5/images/team-shape.svg);
+  --form-input-bg: hsl(0, 0%, 96%);
+  --form-icon-color: hsl(0, 0%, 100%);
+  --details-header-color: #7f7f7f;
+  --target-color: #000;
+}
+
+:root:has(.mode:checked) {
+  --navbar-bg-color: hsl(0, 0%, 9%);
+  --logo-color: #fff;
+  --menu-list-color: #9f9f9f;
+  --mode-icons: #fff;
+  --main-bg-color: #202020;
+  --sub-bg-color: #252525;
+  --highlight-color: #c1731f;
+  --play-icon-bg: #171717;
+  --inner-color: hsl(0, 0%, 9%);
+  --svg-mode: url(/Assignment5/images/team-shape-dark.svg);
+  --form-input-bg: hsl(0, 0%, 5%);
+  --form-icon-color: hsl(0, 0%, 9%);
+  --details-header-color: #adadad;
+  --target-color: #fff;
+}
+
+/* ^ screen1 min-width 577px 
+   ! ----------------------------- */
 @media (min-width: 577px) {
   .sm-100 {
     width: 100%;
@@ -18,7 +54,7 @@
   #page-container .container {
     max-width: 540px;
   }
-  
+
   .sub-input {
     flex-direction: row;
     justify-content: space-between;
@@ -26,10 +62,39 @@
   }
 }
 
+/* max-width to oreder the gallery */
+@media (max-width: 992px) {
+  .gallery-pics .pizza {
+    order: 1;
+  }
 
+  .gallery-pics .burger {
+    order: 2;
+  }
 
+  .gallery-pics .pizza-slices {
+    order: 3;
+  }
 
+  .gallery-pics .omelette {
+    order: 4;
+  }
 
+  .gallery-pics .steak {
+    order: 5;
+  }
+
+  .gallery-pics .fried {
+    order: 6;
+  }
+
+  .gallery-pics .kofta {
+    order: 7;
+  }
+}
+
+/* ^ screen2 min-width 769px 
+   ! ----------------------------- */
 @media (min-width: 769px) {
   .m-100 {
     width: 100%;
@@ -82,12 +147,8 @@
   }
 }
 
-
-
-
-
-
-
+/* ^ screen3 min-width 993px 
+   ! ----------------------------- */
 @media (min-width: 993px) {
   .l-100 {
     width: 100%;
@@ -146,16 +207,13 @@
     height: 845px;
   }
 
-  .grouped-input{
+  .grouped-input {
     flex-direction: row;
   }
 }
 
-
-
-
-
-
+/* ^ screen4 min-width 1201px 
+   ! ----------------------------- */
 @media (min-width: 1201px) {
   .xl-100 {
     width: 100%;
@@ -205,7 +263,7 @@
     height: 1000px;
   }
 
-  .grouped-input{
+  .grouped-input {
     flex-direction: row;
   }
 
@@ -225,90 +283,75 @@
   }
 
   /* The menu list in large screens */
-  #navbar-links{
+  #navbar-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: static;
     box-shadow: none;
     border: none;
-    color: #7f7f90;
     font-size: 17px;
     font-weight: 600;
     --block-gap: 5px;
     --inline-gap: 15px;
     transform: translateX(0);
   }
-  
-  #navbar-links .link a{
+
+  #navbar-links .link a {
     padding: var(--block-gap) var(--inline-gap);
   }
 
-  .menu{
-    display: none;
-  }
-  
-  .night-mode{
-    margin: 0;
-  }
-  
-  #navbar-links .close-icon{
+  .menu {
     display: none;
   }
 
-  #navbar-links .link a::after{
+  .color-mode {
+    margin: 0;
+  }
+
+  #navbar-links .close-icon {
+    display: none;
+  }
+
+  #navbar-links .link a::after {
     content: "";
     position: absolute;
     left: var(--inline-gap);
     bottom: -3px;
     width: 0;
     height: 2px;
-    background-color: #e51414;
+    background-color: var(--highlight-color);
     transition: width 0.4s;
   }
 
-  #navbar-links .link a:hover::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
+  #navbar-links .link a:hover::after {
+    width: calc(calc(100% - var(--inline-gap) * 2));
   }
 
   /* The menu style in the large screens */
-  body:has(.header:target) .link a[href='#home']{
-    color: #000;
+  body:has(.header:target) .link a[href="#home"],
+  body:has(.first-section:target) .link a[href="#chefs"],
+  body:has(.second-section:target) .link a[href="#gallery"],
+  body:has(.third-section:target) .link a[href="#contact"] {
+    color: var(--target-color);
   }
 
-  body:has(.header:target) .link a[href='#home']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
+  body:has(.header:target) #navbar-links .link a[href="#home"]::after,
+  body:has(.first-section:target) #navbar-links .link a[href="#chefs"]::after,
+  body:has(.second-section:target)
+    #navbar-links
+    .link
+    a[href="#gallery"]::after,
+  body:has(.third-section:target)
+    #navbar-links
+    .link
+    a[href="#contact"]::after {
+    width: calc(calc(100% - var(--inline-gap) * 2));
   }
-
-  body:has(.first-section:target) .link a[href='#chefs']{
-    color: #000;
-  }
-
-  body:has(.first-section:target) .link a[href='#chefs']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
-  body:has(.second-section:target) .link a[href='#gallery']{
-    color: #000;
-  }
-
-  body:has(.second-section:target) .link a[href='#gallery']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
-  body:has(.third-section:target) .link a[href='#contact']{
-    color: #000;
-  }
-
-  body:has(.third-section:target) .link a[href='#contact']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
 }
 
-
-
-
+/* ^ screen5 min-width 1401px 
+   ! ----------------------------- */
 @media (min-width: 1401px) {
   .xxl-100 {
     width: 100%;
@@ -358,7 +401,7 @@
     height: 1165px;
   }
 
-  .grouped-input{
+  .grouped-input {
     flex-direction: row;
   }
 
@@ -368,14 +411,14 @@
   }
 
   /* The menu list in large screens */
-  #navbar-links{
+  .navbar-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: static;
     box-shadow: none;
     border: none;
-    color: #7f7f90;
+    color: var(--menu-list-color);
     font-size: 17px;
     font-weight: 600;
     --block-gap: 5px;
@@ -383,85 +426,56 @@
     transform: translateX(0);
     width: auto;
   }
-  
-  #navbar-links .link a{
+
+  .navbar-links .link a {
     padding: var(--block-gap) var(--inline-gap);
   }
 
-  .menu{
+  .menu {
     display: none;
   }
-  
-  .night-mode{
+
+  .color-mode {
     margin: 0;
   }
-  
-  #navbar-links .close-icon{
+
+  .navbar-links .close-icon {
     display: none;
+  }
+
+  .link a::after {
+    content: "";
+    position: absolute;
+    left: var(--inline-gap);
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--highlight-color);
+    transition: width 0.4s;
+  }
+
+  .navbar-links .link a:hover::after {
+    width: calc(calc(100% - var(--inline-gap) * 2));
   }
 
   /* The menu style in the large screens */
-  body:has(.header:target) .link a[href='#home']{
-    color: #000;
+  body:has(.header:target) #navbar-links .link a[href="#home"],
+  body:has(.first-section:target) #navbar-links .link a[href="#chefs"],
+  body:has(.second-section:target) #navbar-links .link a[href="#gallery"],
+  body:has(.third-section:target) #navbar-links .link a[href="#contact"] {
+    color: var(--target-color);
   }
 
-  body:has(.header:target) .link a[href='#home']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
-  body:has(.first-section:target) .link a[href='#chefs']{
-    color: #000;
-  }
-
-  body:has(.first-section:target) .link a[href='#chefs']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
-  body:has(.second-section:target) .link a[href='#gallery']{
-    color: #000;
-  }
-
-  body:has(.second-section:target) .link a[href='#gallery']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-
-  body:has(.third-section:target) .link a[href='#contact']{
-    color: #000;
-  }
-
-  body:has(.third-section:target) .link a[href='#contact']::after{
-    width: calc(calc(100% - var(--inline-gap) * 2) );
-  }
-}
-
-
-
-@media (max-width: 992px) {
-  .gallery-pics .pizza {
-    order: 1;
-  }
-
-  .gallery-pics .burger {
-    order: 2;
-  }
-
-  .gallery-pics .pizza-slices {
-    order: 3;
-  }
-
-  .gallery-pics .omelette {
-    order: 4;
-  }
-
-  .gallery-pics .steak {
-    order: 5;
-  }
-
-  .gallery-pics .fried {
-    order: 6;
-  }
-
-  .gallery-pics .kofta {
-    order: 7;
+  body:has(.header:target) #navbar-links .link a[href="#home"]::after,
+  body:has(.first-section:target) #navbar-links .link a[href="#chefs"]::after,
+  body:has(.second-section:target)
+    #navbar-links
+    .link
+    a[href="#gallery"]::after,
+  body:has(.third-section:target)
+    #navbar-links
+    .link
+    a[href="#contact"]::after {
+    width: calc(calc(100% - var(--inline-gap) * 2));
   }
 }
