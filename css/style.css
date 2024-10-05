@@ -38,6 +38,7 @@ body {
   --details-header-color: #7f7f7f;
   --target-color: #000;
   --nav-border-color: #f1f1f1;
+  --selection-bg-color: hsl(0, 84%, 44%, 0.7)
 }
 
 :root:has(.mode:checked) {
@@ -56,6 +57,7 @@ body {
   --details-header-color: #adadad;
   --target-color: #fff;
   --nav-border-color: hsl(0, 0%, 15%);
+  --selection-bg-color: hsl(35, 72%, 44%, 0.7)
 }
 
 a,
@@ -812,14 +814,9 @@ textarea {
 }
 
 ::selection {
-  background-color: hsl(
-    var(--primary-hue),
-    var(--primary-saturation),
-    var(--primary-lightness),
-    0.7
-  );
+  background-color: var(--selection-bg-color);
   opacity: 0.2;
-  color: var(--color-light);
+  color: var(--inner-color);
 }
 
 .color-mode .light-mode {
