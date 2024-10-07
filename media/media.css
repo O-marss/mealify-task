@@ -100,9 +100,9 @@
     width: 100%;
   }
 
-  /* .m-50 {
+  .m-50 {
     width: calc(calc(100% - var(--gap)) / 2);
-  } */
+  }
 
   .m-40 {
     width: 40%;
