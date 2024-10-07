@@ -124,17 +124,9 @@
     max-width: 720px;
   }
 
-  #gallery-section .gallery-pics {
-    columns: 2;
+  #gallery-section .gallery-pics img {
+    width: 100%;
   }
-
-  
-#gallery-section .gallery-pics img{
-  width: 100%;
-}
-
-
-
 
   .contact-details {
     flex-direction: row;
