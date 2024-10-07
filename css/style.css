@@ -32,7 +32,7 @@ body {
   --highlight-color: #e51414;
   --play-icon-bg: #fff;
   --inner-color: #fff;
-  --svg-mode: url(/Assignment5/images/team-shape.svg);
+  --svg-mode: url(../images/team-shape.svg);
   --form-input-bg: hsl(0, 0%, 96%);
   --form-icon-color: hsl(0, 0%, 100%);
   --details-header-color: #7f7f7f;
@@ -51,7 +51,7 @@ body {
   --highlight-color: #c1731f;
   --play-icon-bg: #171717;
   --inner-color: hsl(0, 0%, 9%);
-  --svg-mode: url(/Assignment5/images/team-shape-dark.svg);
+  --svg-mode: url(../images/team-shape-dark.svg);
   --form-input-bg: hsl(0, 0%, 5%);
   --form-icon-color: hsl(0, 0%, 9%);
   --details-header-color: #adadad;
@@ -485,12 +485,16 @@ img {
 }
 
 .gallery-pics {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* height: auto;  */
   --gap: 20px;
   gap: var(--gap);
+} 
+
+#gallery-section .gallery-pics img{
+  width: 100%;
 }
 
 .pics {
