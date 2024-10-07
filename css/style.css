@@ -485,10 +485,10 @@ img {
 }
 
 .gallery-pics {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* height: auto;  */
+  display: flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto; 
   --gap: 20px;
   gap: var(--gap);
 } 
